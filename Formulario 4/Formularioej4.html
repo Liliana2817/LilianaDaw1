@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contratación de Servicio Telefónico</title>
+</head>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contratación de Servicio Telefónico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select,
+        textarea,
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de Contratación de Servicio Telefónico</h1>
+
+    <form action="#" method="post">
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Z]" required><br>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ\s]{1,50}" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="\+\d{2} \d{3} \d{6}" placeholder="+34 123 456789" required><br>
+
+        <label for="tarifa">Tarifa:</label>
+        <select id="tarifa" name="tarifa" required>
+            <option value="joven">Tarifa Joven</option>
+            <option value="senior">Tarifa Senior</option>
+            <option value="plana">Tarifa Plana Superior</option>
+        </select><br>
+
+        <label for="fecha">Fecha de comienzo del servicio:</label>
+        <input type="date" id="fecha" name="fecha" required><br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" multiple required><br>
+
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal" pattern="\d{5}" required><br>
+
+        <label for="opinion">Opinión (máximo 20 líneas):</label>
+        <textarea id="opinion" name="opinion" rows="7" maxlength="1000" required></textarea><br>
+
+        <label for="calificacion">Calificación (0-10):</label>
+        <input type="number" id="calificacion" name="calificacion" min="0" max="10" required><br>
+
+        <label for="sms">Notificaciones por SMS:</label>
+        <input type="radio" id="smsSi" name="sms" value="Si" required>
+        <label for="smsSi">Sí</label>
+        <input type="radio" id="smsNo" name="sms" value="No" required>
+        <label for="smsNo">No</label><br>
+
+        <label for="condiciones">Condiciones del servicio:</label>
+        <textarea id="condiciones" readonly rows="15" cols="80">
+            Al utilizar nuestro servicio de venta de líneas telefónicas, aceptas cumplir con un uso
+            aceptable para fines legítimos, evitando actividades ilegales o fraudulentas. Durante el registro y el uso de tu cuenta, te comprometes a proporcionar información precisa, mantener la confidencialidad y asumir la responsabilidad de tu cuenta. Al realizar
+            compras, reconoces la obligación de pagar los montos indicados, sujetos a posibles cambios de precios. La entrega y activación de la línea seguirán los plazos establecidos, y la cancelación estará sujeta a nuestras políticas. Como usuario, te
+            responsabilizas del uso adecuado de la línea y debes respetar nuestras políticas de privacidad y seguridad de datos. Nos reservamos el derecho de modificar, suspender
+            o terminar el servicio según sea necesario.
+        </textarea><br>
+
+        <label for="aceptaCondiciones">Acepto las condiciones del servicio:</label>
+        <input type="checkbox" id="aceptaCondiciones" name="aceptaCondiciones" required><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
+    </form>
+
+</body>
+
+</html>
